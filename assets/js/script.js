@@ -1,9 +1,10 @@
 function checkValid() {
-    var input = document.getElementById("nhapngaysinh");
-    if (input.value == "21/11/2003") {
+     if (input.value == "21/11/2003") {
         showImage('./assets/texts/tunganh.txt');
     } else if (input.value == "26/11/2003") {
         showImage("assets/texts/daothanhdung.txt");
+    } else if (input.value == "26/08/2003") {
+        window.location.href = "https://imissmycrush.github.io/snvv/";
     } else {
         alert("Ngày sinh không chính xác!");
     }
