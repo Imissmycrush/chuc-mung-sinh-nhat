@@ -1,5 +1,6 @@
 function checkValid() {
-     if (input.value == "21/11/2003") {
+    var input = document.getElementById("nhapngaysinh");
+    if (input.value == "21/11/2003") {
         showImage('./assets/texts/tunganh.txt');
     } else if (input.value == "26/11/2003") {
         showImage("assets/texts/daothanhdung.txt");
@@ -10,9 +11,11 @@ function checkValid() {
     }
 }
 
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
+$("#nhapngaysinh").on('keyup', function(e) {
+    if (e.key === 'Enter' || e.keyCode === 13) {
+        checkValid();
+    }
+});
 
 function showImage(imgName) {
     function isMobile() {
